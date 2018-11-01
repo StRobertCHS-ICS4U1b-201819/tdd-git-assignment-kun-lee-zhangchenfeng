@@ -8,7 +8,7 @@ def rng():0
 
 def lower_quart():0
 
-def upprt_quart():0
+def upper_quart():0
 
 def variance():0
 
