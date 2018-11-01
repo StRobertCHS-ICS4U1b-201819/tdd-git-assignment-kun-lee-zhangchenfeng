@@ -20,6 +20,12 @@ def test_lower_quart():0
 
 def test_upper_quart():0
 
-def test_variance():0
+
+def test_variance():
+    assert(variance([0]) == 0)
+    assert(variance([16, 20, 3, 22, 24, 8]) == 57.92)
+    assert(variance([]) == 0)
+    assert(variance([6]) == 6)
+
 
 def test_standard_dev():0
