@@ -7,6 +7,9 @@ def test_mean_basic1():
 def test_mean_basic2():
     assert(mean([66, 74, 75, 78, 82, 89]) == 77.3333)
 
+def test_mean_emptyList():
+    assert(mean([]) == 0)
+
 def test_median():0
 
 def test_mode():0
