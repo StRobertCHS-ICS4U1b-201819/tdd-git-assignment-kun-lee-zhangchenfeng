@@ -1,4 +1,11 @@
-def mean():0
+def mean(data):
+    num = 0
+    if len(data) == 0:
+        return 0
+    else:
+        for a in data:
+            num += a
+    return round(num / len(data), 4)
 
 def median():0
 
