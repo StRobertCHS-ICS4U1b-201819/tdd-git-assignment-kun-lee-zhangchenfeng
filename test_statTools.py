@@ -16,7 +16,7 @@ def test_mode():0
 
 def test_rng():0
 
-def test_lower_quart():
+def test_lower_quart():0
 
 def test_upper_quart():0
 
