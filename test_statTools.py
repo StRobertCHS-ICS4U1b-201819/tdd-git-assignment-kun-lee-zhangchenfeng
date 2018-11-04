@@ -47,6 +47,10 @@ def test_upper_quart():
     # even number of items in list- each half has odd number of items
     assert(upper_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 9.5)
     # even number of items in list- each half has even number of items
+    assert(upper_quartile([]) is None)
+    # empty list
+    assert(upper_quartile([1, 2, 3]) is None)
+    # less than 4 items in list
 
 
 def test_variance():0
