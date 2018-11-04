@@ -58,6 +58,8 @@ def test_upper_quart():
 def test_variance():
     assert(variance([0]) == 0)
     # parameter and returns
+    assert(variance([16, 20, 3, 22, 24, 8]) == 57.9167)
+    # standard variance
 
 
 def test_std():0
