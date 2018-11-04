@@ -51,9 +51,21 @@ def upper_quartile(data):
 
 
 def variance(data, sample=False):
-    if len(data) == 0:return None
-    if sample:denominator = len(data) - 1
-    else:denominator = len(data)
+    """
+    Returns the variance of a list of Integers
+    Method of calculation is dependent on whether the data is from a population
+    Assumes not sample by default
+
+    :param data: list of Integers
+    :param sample: Boolean if the data is from a sample
+    :return: Float rounded to 4 decimal places variance of the data. None if no data
+    """
+    if len(data) == 0:
+        return None
+    if sample:
+        denominator = len(data) - 1
+    else:
+        denominator = len(data)
     mew = sum(data) / len(data)
     return round(sum([(item - mew) ** 2 for item in data]) / denominator, 4)
 
