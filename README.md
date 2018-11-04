@@ -1,4 +1,5 @@
 # TDD & Git Assignment
+#### TODO:
 - [x] mean
 - [ ] median
 - [ ] mode
