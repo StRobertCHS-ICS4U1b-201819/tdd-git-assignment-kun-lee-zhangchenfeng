@@ -60,14 +60,9 @@ def variance(data, sample=False):
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
-    if len(data) == 0:
-        return None
-    if sample:
-        denominator = len(data) - 1
-    else:
-        denominator = len(data)
+    if len(data) == 0: return None
     mew = sum(data) / len(data)
-    return round(sum([(item - mew) ** 2 for item in data]) / denominator, 4)
+    return round(sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0)), 4)
 
 
 def standard_dev(data, sample=False):
@@ -80,12 +75,7 @@ def standard_dev(data, sample=False):
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
-    if len(data) == 0:
-        return None
+    if len(data) == 0: return None
     from math import sqrt
-    if sample:
-        denominator = len(data) - 1
-    else:
-        denominator = len(data)
     mew = sum(data) / len(data)
-    return round(sqrt(sum([(item - mew) ** 2 for item in data]) / denominator), 4)
+    return round(sqrt(sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))), 4)
