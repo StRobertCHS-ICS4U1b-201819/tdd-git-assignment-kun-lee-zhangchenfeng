@@ -39,19 +39,19 @@ def test_lower_quart():
 def test_upper_quart():
     assert(upper_quart([0]) == 0);
     # parameter and return
-    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 2.5000)
+    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 7.5)
     # odd number of items in list- each half has even number of items
-    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == 3)
+    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == 9)
     # odd number of items in list- each half has odd number of items
-    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 3)
+    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 8)
     # even number of items in list- each half has odd number of items
-    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3.5000)
+    assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 9.5)
     # even number of items in list- each half has even number of items
     assert(upper_quart([]) == 0)
     # empty list
     assert(upper_quart([1, 2, 3]) == 0)
     # less than 4 items in list
-    assert(upper_quart([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 3.5)
+    assert(upper_quart([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 9.5)
     # unsorted list
 
 
