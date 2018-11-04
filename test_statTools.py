@@ -32,6 +32,8 @@ def test_lower_quart():
     # empty list
     assert(lower_quart([1, 2, 3]) == 0)
     # less than 4 items in list
+    assert(lower_quart([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 3.5)
+    # unsorted list
 
 
 def test_upper_quart():0
