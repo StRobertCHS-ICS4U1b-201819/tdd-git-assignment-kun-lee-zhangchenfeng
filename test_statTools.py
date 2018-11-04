@@ -51,6 +51,8 @@ def test_upper_quart():
     # empty list
     assert(upper_quartile([1, 2, 3]) is None)
     # less than 4 items in list
+    assert(upper_quartile([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 9.5)
+    # unsorted list
 
 
 def test_variance():0
