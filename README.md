@@ -13,7 +13,7 @@
 # _[NICO NICO NII](https://cdn.discordapp.com/attachments/496020212764901387/508772323076079646/nico_nico_nii.gif)_
 This is | a table
 ------- | -------
-wow | xd
+wow | nice
 
 ## 1) Objective
 
