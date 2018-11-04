@@ -26,8 +26,12 @@ def test_lower_quart():
     # odd number of items in list- each half has odd number of items
     assert(lower_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 3)
     # even number of items in list- each half has odd number of items
-    assert(lower_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3.5000)
+    assert(lower_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3.5000)
     # even number of items in list- each half has even number of items
+    assert(lower_quartile([]) is None)
+    # empty list
+    assert(lower_quartile([1, 2, 3]) is None)
+    # less than 4 items in list
 
 
 def test_upper_quart():0
