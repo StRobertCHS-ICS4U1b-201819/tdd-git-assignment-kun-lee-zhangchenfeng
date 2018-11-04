@@ -51,7 +51,8 @@ def upper_quartile(data):
 
 
 def variance(data):
-    return 0
+    mew = sum(data) / len(data)
+    return round(sum([(item - mew) ** 2 for item in data]) / len(data), 4)
 
 
 def standard_dev():0
