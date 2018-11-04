@@ -17,6 +17,7 @@ def rng():0
 def lower_quartile(data):
     length = len(data)
     if length<4:return None
+    list.sort(data)
     if length%4in[2, 3]:raw_output = data[length//4]
     else:raw_output = (data[length//4] + data[length//4-1])/2
     return round(raw_output, 4)
