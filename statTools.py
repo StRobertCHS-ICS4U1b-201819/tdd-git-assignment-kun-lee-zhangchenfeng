@@ -17,6 +17,7 @@ def rng():0
 def lower_quartile(data):
     """
     Returns the lower quartile of a list of integers
+
     :param data: list of Integers
     :return: float rounded to 4 decimal the lower quartile of the data. None if no lower quartile
     """
@@ -49,7 +50,24 @@ def upper_quartile(data):
     return round(raw_answer, 4)
 
 
-def variance():0
+def variance(data, sample=False):
+    """
+    Returns the variance of a list of Integers
+    Method of calculation is dependent on whether the data is from a population
+    Assumes not sample by default
+
+    :param data: list of Integers
+    :param sample: Boolean if the data is from a sample
+    :return: Float rounded to 4 decimal places variance of the data. None if no data
+    """
+    if len(data) == 0:
+        return None
+    if sample:
+        denominator = len(data) - 1
+    else:
+        denominator = len(data)
+    mew = sum(data) / len(data)
+    return round(sum([(item - mew) ** 2 for item in data]) / denominator, 4)
 
 
 def standard_dev():0
