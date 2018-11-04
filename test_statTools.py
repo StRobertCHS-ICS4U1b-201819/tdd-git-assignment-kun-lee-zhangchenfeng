@@ -34,4 +34,16 @@ def test_variance():
     assert(variance([-34, -102, -82, 172, 140, -80, 167, -19, 6, 99, 132, -154, -200, 139, 53, 198, 173, -66, 87, -15, 1, 143, 83, -106, 167, -81, -1, -140, 47, -141, 42, -75, -41, 9, 123, 75, 9, 125, -173, 71, -107, 69, -184, 103, 162, -53, -170, 161, 51, -180], False) == 13281.6564)
     # variance of population
 
-def test_standard_dev():0
+
+def test_standard_dev():
+    assert(standard_dev([0]) == 0)
+    # parameter and return
+    assert(standard_dev([-39, -4, -62, -27, -1, -29, -33, -105, -150, -147, 50, 59, 34, 42, -88, -7, -40, -23, 114, 102], False) == 70.4032)
+    # std of population
+    assert(standard_dev([-39, -4, -62, -27, -1, -29, -33, -105, -150, -147, 50, 59, 34, 42, -88, -7, -40, -23, 114, 102], True) == 72.2322)
+    # std of sample
+    assert(standard_dev([4], False) == 0)
+    # 1 value list
+    assert(standard_dev([], True) == 0)
+    # empty list
+

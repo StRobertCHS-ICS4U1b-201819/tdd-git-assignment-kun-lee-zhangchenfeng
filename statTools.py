@@ -21,20 +21,39 @@ def upper_quart():0
 def variance(data, sample=False):
     """
     Returns the variance of a list of Integers
-    Method of calculation is dependent on whether the data is from a population or a sample
+    Method of calculation is dependent on whether the data is from a population
+    Assumes not sample by default
 
     :param data: list of Integers
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data
     """
+    if len(data) <= 1:
+        return 0
     if sample:
         denominator = len(data) - 1
     else:
         denominator = len(data)
-    if len(data) <= 1:
-        return 0
     mean = sum(data) / len(data)
     return round(sum([(item - mean) ** 2 for item in data]) / denominator, 4)
 
 
-def standard_dev():0
+def standard_dev(data, sample=False):
+    """
+    Returns the standard deviation of a list of Integers
+    Method of calculation is dependent on whether the data is from a population
+    Assumes not sample by default
+
+    :param data: list of Integers
+    :param sample: Boolean if the data is from a sample
+    :return: Float rounded to 4 decimal places variance of the data
+    """
+    from math import sqrt
+    if len(data) <= 1:
+        return 0
+    if sample:
+        denominator = len(data) - 1
+    else:
+        denominator = len(data)
+    mean = sum(data) / len(data)
+    return round(sqrt(sum([(item - mean) ** 2 for item in data]) / denominator), 4)
