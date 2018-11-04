@@ -71,6 +71,7 @@ def variance(data, sample=False):
 
 
 def standard_dev(data, sample=False):
+    if len(data) == 0:return None
     from math import sqrt
     if sample:denominator = len(data) - 1
     else:denominator = len(data)
