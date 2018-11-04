@@ -15,7 +15,8 @@ def rng():0
 
 
 def lower_quartile(data):
-    return 0
+    raw_output = (data[len(data)//4] + data[len(data)//4-1])/2
+    return round(raw_output, 4)
 
 
 def upper_quartile():0
