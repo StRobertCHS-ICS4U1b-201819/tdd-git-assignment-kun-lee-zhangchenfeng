@@ -71,4 +71,7 @@ def variance(data, sample=False):
 
 
 def standard_dev(data):
-    return 0
+    from math import sqrt
+    if len(data) == 1:return 0
+    mew = sum(data) / len(data)
+    return round(sqrt(sum([(item - mew) ** 2 for item in data]) / len(data)), 4)
