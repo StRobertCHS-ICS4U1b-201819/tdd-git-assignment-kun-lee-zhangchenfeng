@@ -32,12 +32,20 @@ def lower_quartile(data):
 
 
 def upper_quartile(data):
+    """
+    Returns the upper quartile of a list of integers
+
+    :param data: list of Integers
+    :return: float rounded to 4 decimal the upper quartile of the data. None if no upper quartile
+    """
     length = len(data)
     if length < 4:
         return None
     list.sort(data)
-    if length % 4 in [2, 3]:raw_answer = data[-length // 4]
-    else:raw_answer = (data[-(length // 4)] + data[-(length // 4) - 1]) / 2
+    if length % 4 in [2, 3]:
+        raw_answer = data[-length // 4]
+    else:
+        raw_answer = (data[-(length // 4)] + data[-(length // 4) - 1]) / 2
     return round(raw_answer, 4)
 
 
