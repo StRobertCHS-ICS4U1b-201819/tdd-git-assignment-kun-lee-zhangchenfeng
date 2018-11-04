@@ -70,4 +70,5 @@ def variance(data, sample=False):
     return round(sum([(item - mew) ** 2 for item in data]) / denominator, 4)
 
 
-def standard_dev():0
+def standard_dev(data):
+    return 0
