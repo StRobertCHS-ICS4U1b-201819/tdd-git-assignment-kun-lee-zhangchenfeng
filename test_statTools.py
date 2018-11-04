@@ -68,4 +68,14 @@ def test_variance():
     # empty list
 
 
-def test_std():0
+def test_std():
+    assert(standard_dev([0]) == 0)
+    # parameter and return
+    assert(standard_dev([16, 20, 3, 22, 24, 8]) == 7.6103)
+    # normal standard deviation
+    assert(standard_dev([-39, -4, -62, -27, -1, -29, -33, -105, -150, -147, 50, 59, 34, 42, -88, -7, -40, -23, 114, 102], False) == 70.4032)
+    # std of population
+    assert(standard_dev([-39, -4, -62, -27, -1, -29, -33, -105, -150, -147, 50, 59, 34, 42, -88, -7, -40, -23, 114, 102], True) == 72.2322)
+    # std of sample
+    assert (standard_dev([]) is None)
+    # empty list
