@@ -1,8 +1,4 @@
 # TDD & Git Assignment
-This is | a table
-------- | -------
-wow | xd
-
 - [x] mean
 - [ ] median
 - [ ] mode
@@ -11,6 +7,11 @@ wow | xd
 - [x] q3
 - [x] variance
 - [x] std
+
+This is | a table
+------- | -------
+wow | xd
+
 ## 1) Objective
 
 Using Test-Driven Development, you will work with a partner to create a single python module called **statTools.py** that contains functions for [Measures of Central Tendency](https://www.statcan.gc.ca/edu/power-pouvoir/ch11/5214867-eng.htm) and [Measures of Spread](https://www.statcan.gc.ca/edu/power-pouvoir/ch12/5214876-eng.htm).  
