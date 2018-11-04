@@ -77,3 +77,5 @@ def test_std():
     # std of population
     assert(standard_dev([-39, -4, -62, -27, -1, -29, -33, -105, -150, -147, 50, 59, 34, 42, -88, -7, -40, -23, 114, 102], True) == 72.2322)
     # std of sample
+    assert (standard_dev([]) is None)
+    # empty list
