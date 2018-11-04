@@ -64,6 +64,8 @@ def test_variance():
     # variance of sample
     assert(variance([-34, -102, -82, 172, 140, -80, 167, -19, 6, 99, 132, -154, -200, 139, 53, 198, 173, -66, 87, -15, 1, 143, 83, -106, 167, -81, -1, -140, 47, -141, 42, -75, -41, 9, 123, 75, 9, 125, -173, 71, -107, 69, -184, 103, 162, -53, -170, 161, 51, -180], False) == 13281.6564)
     # variance of population
+    assert(variance([], True) is None)
+    # empty list
 
 
 def test_std():0
