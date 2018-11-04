@@ -31,7 +31,8 @@ def lower_quartile(data):
     return round(raw_output, 4)
 
 
-def upper_quartile():0
+def upper_quartile(data):
+    return None
 
 
 def variance():0
