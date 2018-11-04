@@ -1,5 +1,7 @@
 # TDD & Git Assignment
-
+This is | a table
+------- | -------
+wow | xd
 
 ## 1) Objective
 
