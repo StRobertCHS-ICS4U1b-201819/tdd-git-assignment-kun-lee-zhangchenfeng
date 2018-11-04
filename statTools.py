@@ -50,9 +50,11 @@ def upper_quartile(data):
     return round(raw_answer, 4)
 
 
-def variance(data):
+def variance(data, sample=False):
+    if sample:denominator = len(data) - 1
+    else:denominator = len(data)
     mew = sum(data) / len(data)
-    return round(sum([(item - mew) ** 2 for item in data]) / len(data), 4)
+    return round(sum([(item - mew) ** 2 for item in data]) / denominator, 4)
 
 
 def standard_dev():0
