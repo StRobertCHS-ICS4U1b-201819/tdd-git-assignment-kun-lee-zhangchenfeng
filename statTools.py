@@ -25,14 +25,18 @@ def lower_quartile(data):
         return None
     list.sort(data)
     if length % 4 in [2, 3]:
-        raw_output = data[length // 4]
+        raw_answer = data[length // 4]
     else:
-        raw_output = (data[length // 4] + data[length // 4 - 1]) / 2
-    return round(raw_output, 4)
+        raw_answer = (data[length // 4] + data[length // 4 - 1]) / 2
+    return round(raw_answer, 4)
 
 
 def upper_quartile(data):
-    return None
+    length = len(data)
+    if length == 1:
+        return None
+    raw_answer = (data[-(length // 4)] + data[-(length // 4) - 1]) / 2
+    return round(raw_answer, 4)
 
 
 def variance():0
