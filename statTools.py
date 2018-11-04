@@ -28,12 +28,12 @@ def variance(data, sample=False):
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data
     """
+    if len(data) <= 1:
+        return 0
     if sample:
         denominator = len(data) - 1
     else:
         denominator = len(data)
-    if len(data) <= 1:
-        return 0
     mean = sum(data) / len(data)
     return round(sum([(item - mean) ** 2 for item in data]) / denominator, 4)
 
