@@ -68,4 +68,6 @@ def test_variance():
     # empty list
 
 
-def test_std():0
+def test_std():
+    assert(standard_dev([0]) == 0)
+    # parameter and return
