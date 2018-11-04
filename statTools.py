@@ -15,10 +15,20 @@ def rng():0
 
 
 def lower_quart(data):
+    """
+    Returns the lower quartile of a list of integers
+
+    :param data: list of Integers
+    :return: float rounded to 4 decimal the lower quartile of the data
+    """
     length = len(data)
-    if length < 4: return 0
-    if length % 4 == 3 or length % 4 == 2: raw_answer = data[length // 4]
-    else: raw_answer = (data[length // 4] + data[length // 4 - 1]) / 2
+    if length < 4:
+        return 0
+    list.sort(data)
+    if length % 4 == 3 or length % 4 == 2:
+        raw_answer = data[length // 4]
+    else:
+        raw_answer = (data[length // 4] + data[length // 4 - 1]) / 2
     return round(raw_answer, 4)
 
 
