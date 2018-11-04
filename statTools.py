@@ -13,7 +13,10 @@ def mode():0
 
 def rng():0
 
-def lower_quart():0
+
+def lower_quart(data):
+    return 0
+
 
 def upper_quart():0
 
