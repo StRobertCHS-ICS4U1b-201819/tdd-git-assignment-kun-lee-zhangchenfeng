@@ -32,7 +32,8 @@ def lower_quart(data):
     return round(raw_answer, 4)
 
 
-def upper_quart():0
+def upper_quart(data):
+    return 0
 
 
 def variance(data, sample=False):
