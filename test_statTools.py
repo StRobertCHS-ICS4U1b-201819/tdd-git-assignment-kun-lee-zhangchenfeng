@@ -71,3 +71,5 @@ def test_variance():
 def test_std():
     assert(standard_dev([0]) == 0)
     # parameter and return
+    assert(standard_dev([16, 20, 3, 22, 24, 8]) == 7.610)
+    # normal standard deviation
