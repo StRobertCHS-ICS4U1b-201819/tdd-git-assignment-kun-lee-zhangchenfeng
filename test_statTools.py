@@ -55,6 +55,9 @@ def test_upper_quart():
     # unsorted list
 
 
-def test_variance():0
+def test_variance():
+    assert(variance([0]) == 0)
+    # parameter and returns
+
 
 def test_std():0
