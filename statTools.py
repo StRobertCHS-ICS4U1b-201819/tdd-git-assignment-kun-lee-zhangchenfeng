@@ -37,5 +37,10 @@ def variance(data, sample=False):
     return round(sum([(item - mean) ** 2 for item in data]) / denominator, 4)
 
 
-def standard_dev(data):
-    return 0
+def standard_dev(data, sample=False):
+    from math import sqrt
+    if len(data) <= 1: return 0
+    if sample: denominator = len(data) - 1
+    else: denominator = len(data)
+    mean = sum(data) / len(data)
+    return round(sqrt(sum([(item - mean) ** 2 for item in data]) / denominator), 4)
