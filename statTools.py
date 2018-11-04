@@ -33,7 +33,7 @@ def lower_quartile(data):
 
 def upper_quartile(data):
     length = len(data)
-    if length == 1:
+    if length < 4:
         return None
     if length % 4 in [2, 3]:raw_answer = data[-length // 4]
     else:raw_answer = (data[-(length // 4)] + data[-(length // 4) - 1]) / 2
