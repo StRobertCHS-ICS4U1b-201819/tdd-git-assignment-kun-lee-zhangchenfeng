@@ -18,7 +18,7 @@ def test_rng():0
 
 
 def test_lower_quart():
-    assert(lower_quart([0]) == 0);
+    assert(lower_quart([0]) is None);
     # parameter and return
     assert(lower_quart([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 2.5000)
     # odd number of items in list- each half has even number of items
@@ -28,16 +28,16 @@ def test_lower_quart():
     # even number of items in list- each half has odd number of items
     assert(lower_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3.5000)
     # even number of items in list- each half has even number of items
-    assert(lower_quart([]) == 0)
+    assert(lower_quart([]) is None)
     # empty list
-    assert(lower_quart([1, 2, 3]) == 0)
+    assert(lower_quart([1, 2, 3]) is None)
     # less than 4 items in list
     assert(lower_quart([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 3.5)
     # unsorted list
 
 
 def test_upper_quart():
-    assert(upper_quart([0]) == 0);
+    assert(upper_quart([0]) is None);
     # parameter and return
     assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 7.5)
     # odd number of items in list- each half has even number of items
@@ -47,9 +47,9 @@ def test_upper_quart():
     # even number of items in list- each half has odd number of items
     assert(upper_quart([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 9.5)
     # even number of items in list- each half has even number of items
-    assert(upper_quart([]) == 0)
+    assert(upper_quart([]) is None)
     # empty list
-    assert(upper_quart([1, 2, 3]) == 0)
+    assert(upper_quart([1, 2, 3]) is None)
     # less than 4 items in list
     assert(upper_quart([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 9.5)
     # unsorted list
@@ -59,7 +59,7 @@ def test_variance():
     assert(variance([0], False) == 0)
     # parameter and returns
     assert(variance([16, 20, 3, 22, 24, 8], False) == 57.9167)
-    assert(variance([], True) == 0)
+    assert(variance([], True) is None)
     # empty list
     assert(variance([6], False) == 0)
     # 1 value
@@ -78,6 +78,6 @@ def test_standard_dev():
     # std of sample
     assert(standard_dev([4], False) == 0)
     # 1 value list
-    assert(standard_dev([], True) == 0)
+    assert(standard_dev([], True) is None)
     # empty list
 
