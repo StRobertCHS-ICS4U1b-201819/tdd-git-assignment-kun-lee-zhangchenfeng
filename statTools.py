@@ -51,6 +51,7 @@ def upper_quartile(data):
 
 
 def variance(data, sample=False):
+    if len(data) == 0:return None
     if sample:denominator = len(data) - 1
     else:denominator = len(data)
     mew = sum(data) / len(data)
