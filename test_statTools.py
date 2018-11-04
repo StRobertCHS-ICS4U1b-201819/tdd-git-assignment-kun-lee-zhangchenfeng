@@ -19,6 +19,10 @@ def test_rng():0
 
 def test_lower_quart():
     assert(lower_quartile([0]) == 0)
+    # parameter and return
+    assert(lower_quart([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 2.5000)
+    # odd number of items in list- each half has even number of items
+
 
 def test_upper_quart():0
 
