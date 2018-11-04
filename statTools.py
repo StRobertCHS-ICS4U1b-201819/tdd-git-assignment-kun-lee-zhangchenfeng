@@ -39,6 +39,15 @@ def variance(data, sample=False):
 
 
 def standard_dev(data, sample=False):
+    """
+    Returns the standard deviation of a list of Integers
+    Method of calculation is dependent on whether the data is from a population
+    Assumes not sample by default
+
+    :param data: list of Integers
+    :param sample: Boolean if the data is from a sample
+    :return: Float rounded to 4 decimal places variance of the data
+    """
     from math import sqrt
     if len(data) <= 1:
         return 0
