@@ -9,7 +9,9 @@
 - [x] variance
 - [x] std
 
-# _[NICO NICO NII](https://cdn.discordapp.com/attachments/496020212764901387/508772323076079646/nico_nico_nii.gif)_
+# _Nico Nico Nii_
+![nico](https://cdn.discordapp.com/attachments/496020212764901387/508772323076079646/nico_nico_nii.gif)
+
 This is | a table
 ------- | -------
 wow | nice
