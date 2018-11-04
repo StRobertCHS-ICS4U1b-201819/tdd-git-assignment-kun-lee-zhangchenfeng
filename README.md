@@ -4,9 +4,9 @@ This is | a table
 wow | xd
 
 - [x] mean
-- [] median
-- [] mode
-- [] range
+- [ ] median
+- [ ] mode
+- [ ] range
 - [x] q1
 - [x] q3
 - [x] variance
