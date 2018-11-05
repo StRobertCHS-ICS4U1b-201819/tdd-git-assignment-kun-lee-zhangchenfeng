@@ -22,7 +22,10 @@ def test_median_evenList():
 def test_median_emptyList():
     assert(median([]) == 0)
 
-def test_mode():0
+def test_mode_emptyList():
+    assert(mode([]) == 0)
+
+
 
 def test_rng():0
 

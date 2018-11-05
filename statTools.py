@@ -17,7 +17,9 @@ def median(data):
     else:
         return (sorted_Data[len(data) // 2] + (sorted_Data[(len(data) // 2) - 1])) / 2
 
-def mode():0
+def mode(data):
+    if len(data) == 0:
+        return 0
 
 def rng():0
 
