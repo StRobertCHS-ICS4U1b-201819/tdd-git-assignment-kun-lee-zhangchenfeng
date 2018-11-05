@@ -1,4 +1,10 @@
 def mean(data):
+    """
+    Returns the average of the integers in the list
+
+    :param data: list of integers
+    :return: Float rounded up to four decimals the average value of the data. None if no data.
+    """
     num = 0
     if len(data) == 0:
         return None
@@ -8,6 +14,12 @@ def mean(data):
     return round(num / len(data), 4)
 
 def median(data):
+    """
+    Returns the middle number of the list
+
+    :param data: list of integers
+    :return: the middle integer in the list. average of the 2 numbers if two middle integers. None if no data.
+    """
     sorted_Data = sorted(data)
     num = 0
     if len(data) == 0:
@@ -17,11 +29,25 @@ def median(data):
     else:
         return (sorted_Data[len(data) // 2] + (sorted_Data[(len(data) // 2) - 1])) / 2
 
-def mode(data):
-    if len(data) == 0:
-        return None
-    else:
-        return max(set(data), key=data.count)
+def mode(data):0
+#     """
+#     Returns the number that appears the most in the list.
+#
+#     :param data:
+#     :return:
+#     """
+#     if len(data) == 0:
+#         return None
+#     count = {}
+#     highest = 0
+#     for item in data:
+#         if item in count:
+#             count[item] += 1
+#         else:
+#             count[item] = 1
+#         if count[item] > highest: highest = count[data]
+#     return [number if count[number] == highest else 0 for number in count]
+
 
 def rng(data):
     sorted_Data = sorted(data)

@@ -28,6 +28,9 @@ def test_mode_emptyList():
 def test_mode_basic1():
    assert(mode([1, 1, 2, 3, 4]) == 1)
 
+def test_mode_multiple_modes():
+    assert(mode([1, 1, 1, 3, 3, 3, 2, 5]) == (1, 3))
+
 def test_rng_emptyList():
     assert(rng([]) is None)
 
