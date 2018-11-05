@@ -1,6 +1,6 @@
 # TODO
-#### Kun:
-- [x] mean _Update this when you finish this_
+#### Kun:      _Update this when you finish this_
+- [x] mean
 - [ ] median
 - [ ] mode
 - [ ] range
