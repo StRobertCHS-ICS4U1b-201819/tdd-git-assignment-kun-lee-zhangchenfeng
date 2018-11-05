@@ -1,9 +1,9 @@
 # TODO
-#### Kun:     _Update this when you finish this_
+#### Kun:
 - [x] mean
-- [ ] median
-- [ ] mode
-- [ ] range
+- [x] median
+- [x] mode
+- [x] range
 #### ChenFengZhang:
 - [x] q1
 - [x] q3
