@@ -23,7 +23,9 @@ def mode(data):
     else:
         return max(set(data), key=data.count)
 
-def rng():0
+def rng(data):
+    if len(data) == 0:
+        return None
 
 
 def lower_quartile(data):
