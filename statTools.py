@@ -20,6 +20,8 @@ def median(data):
 def mode(data):
     if len(data) == 0:
         return 0
+    else:
+        return max(set(data), key=data.count)
 
 def rng():0
 

@@ -25,7 +25,8 @@ def test_median_emptyList():
 def test_mode_emptyList():
     assert(mode([]) == 0)
 
-
+def test_mode_basic1():
+   assert(mode([1, 1, 2, 3, 4]) == 1)
 
 def test_rng():0
 
