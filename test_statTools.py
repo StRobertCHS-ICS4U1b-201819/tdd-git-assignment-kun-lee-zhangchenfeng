@@ -10,7 +10,8 @@ def test_mean_basic2():
 def test_mean_emptyList():
     assert(mean([]) == 0)
 
-def test_median():0
+def test_median_oddList():
+    assert(median([1, 2, 3, 4, 5]) == 3)
 
 def test_mode():0
 
