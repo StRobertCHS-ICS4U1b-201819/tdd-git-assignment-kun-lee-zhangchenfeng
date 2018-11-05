@@ -13,6 +13,9 @@ def test_mean_emptyList():
 def test_median_oddList():
     assert(median([1, 2, 3, 4, 5]) == 3)
 
+def test_median_oddList_unsorted():
+   assert(median([2, 5, 1, 4, 3]) == 3)
+
 def test_mode():0
 
 def test_rng():0
