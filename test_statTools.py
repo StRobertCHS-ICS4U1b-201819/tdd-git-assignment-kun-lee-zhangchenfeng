@@ -31,8 +31,8 @@ def test_mode_basic1():
 def test_rng_emptyList():
     assert(rng([]) is None)
 
-
-
+def test_rng_emptyList_sorted():
+    assert(rng([1, 2, 3, 4, 5]) == 4)
 
 def test_lower_quart():
     assert(lower_quartile([0]) is None)
