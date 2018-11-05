@@ -1,7 +1,7 @@
 def mean(data):
     num = 0
     if len(data) == 0:
-        return 0
+        return None
     else:
         for a in data:
             num += a
@@ -11,7 +11,7 @@ def median(data):
     sorted_Data = sorted(data)
     num = 0
     if len(data) == 0:
-        return 0
+        return None
     elif (len(data) % 2) != 0:
         return sorted_Data[len(data) // 2]
     else:
@@ -19,7 +19,7 @@ def median(data):
 
 def mode(data):
     if len(data) == 0:
-        return 0
+        return None
     else:
         return max(set(data), key=data.count)
 
