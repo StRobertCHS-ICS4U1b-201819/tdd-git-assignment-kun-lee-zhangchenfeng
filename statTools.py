@@ -13,6 +13,7 @@ def mean(data):
             num += a
     return round(num / len(data), 4)
 
+
 def median(data):
     """
     Returns the middle number of the list
@@ -29,24 +30,30 @@ def median(data):
     else:
         return (sorted_Data[len(data) // 2] + (sorted_Data[(len(data) // 2) - 1])) / 2
 
-def mode(data):0
-#     """
-#     Returns the number that appears the most in the list.
-#
-#     :param data:
-#     :return:
-#     """
-#     if len(data) == 0:
-#         return None
-#     count = {}
-#     highest = 0
-#     for item in data:
-#         if item in count:
-#             count[item] += 1
-#         else:
-#             count[item] = 1
-#         if count[item] > highest: highest = count[data]
-#     return [number if count[number] == highest else 0 for number in count]
+
+def mode(data):
+    """
+    Returns the number that appears the most in the list.
+
+    :param data: list of integers
+    :return: the integer(s) with the most frequency in the list. None if no data.
+    """
+    if len(data) == 0:
+        return None
+    count = {}
+    highest = 0
+    for item in data:
+        if item in count:
+            count[item] += 1
+        else:
+            count[item] = 1
+        if count[item] > highest:
+            highest = count[item]
+    out = []
+    [out.append(unique) if count[unique] == highest else 0 for unique in count]
+    if len(out) == 1:
+        return out[0]
+    return sorted(out)
 
 
 def rng(data):
