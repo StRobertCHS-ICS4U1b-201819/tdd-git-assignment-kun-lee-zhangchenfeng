@@ -1,9 +1,10 @@
-# TDD & Git Assignment
-#### TODO:
+### TODO:
+#### Kun:
 - [x] mean
 - [ ] median
 - [ ] mode
 - [ ] range
+#### ChenFengZhang:
 - [x] q1
 - [x] q3
 - [x] variance
@@ -15,6 +16,8 @@
 This is | a table
 ------- | -------
 wow | nice
+
+# TDD & Git Assignment
 
 ## 1) Objective
 
