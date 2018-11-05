@@ -10,7 +10,7 @@
 - [x] variance
 - [x] std
 
-## _Nico Nico Nii_
+# _Nico Nico Nii_
 ![nico](https://cdn.discordapp.com/attachments/496020212764901387/508772323076079646/nico_nico_nii.gif)
 
 This is | a table
