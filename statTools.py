@@ -36,7 +36,6 @@ def median(data):
     :return: the middle integer in the list. average of the 2 numbers if two middle integers. None if no data.
     """
     sorted_Data = sorted(data)
-    num = 0
     if len(data) == 0:
         return None
     elif (len(data) % 2) != 0:
@@ -73,8 +72,8 @@ def mode(data):
 def rng(data):
     """
     returns the difference between the greatest value and the smallest value in the data
-    :param data:
-    :return:
+    :param data: list of integers
+    :return: the difference between the biggest and smallest number in the list
     """
     if len(data) == 0:
         return None
@@ -95,7 +94,7 @@ def lower_quartile(data):
     :return: float rounded to 4 decimal the lower quartile of the data. None if no lower quartile
     """
     length = len(data)
-    if length < 4:return None
+    if length < 4: return None
     list.sort(data)
     return round(data[length // 4] if length % 4 in [2, 3] else (data[length // 4] + data[length // 4 - 1]) / 2, 4)
 
