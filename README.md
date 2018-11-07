@@ -11,7 +11,7 @@
 - [x] std
 
 # _Nico Nico Nii_
-![nico](https://cdn.discordapp.com/attachments/496020212764901387/508772323076079646/nico_nico_nii.gif)
+![nico](https://media.discordapp.net/attachments/509538412877971468/509540551494860832/nico_nico_nii.gif)
 
 This is | a table
 ------- | -------
