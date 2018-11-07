@@ -71,11 +71,20 @@ def mode(data):
 
 
 def rng(data):
-    sorted_Data = sorted(data)
+    """
+    returns the difference between the greatest value and the smallest value in the data
+    :param data:
+    :return:
+    """
     if len(data) == 0:
         return None
-    else:
-        return sorted_Data[len(data) -1] - sorted_Data[0]
+    big, small = data[0], data[0]
+    for item in data[1:]:
+        if item < small:
+            small = item
+        if item > big:
+            big = item
+    return big - small
 
 
 def lower_quartile(data):
