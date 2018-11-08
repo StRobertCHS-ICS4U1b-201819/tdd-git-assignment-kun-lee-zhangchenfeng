@@ -88,7 +88,8 @@ def rng(data):
 
 def lower_quartile(data):
     """
-    Returns the lower quartile of a list of integers
+    Returns the median of the lower half of a list of integers not inclusive of the median of the whole list
+    list must be at least 4 integers long
 
     :param data: list of Integers
     :return: float rounded to 4 decimal the lower quartile of the data. None if no lower quartile
@@ -101,7 +102,8 @@ def lower_quartile(data):
 
 def upper_quartile(data):
     """
-    Returns the upper quartile of a list of integers
+    Returns the median of the upper half of a list of integers not inclusive of the median of the whole list
+    list must be at least 4 integers long
 
     :param data: list of Integers
     :return: float rounded to 4 decimal the upper quartile of the data. None if no upper quartile
