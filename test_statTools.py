@@ -116,3 +116,11 @@ def test_std():
     # std of sample
     assert (standard_dev([]) is None)
     # empty list
+    with pytest.raises(TypeError) as err1:
+        standard_dev("felix")
+    assert("input must be a list") in str(err1.value)
+    # exception for input not list
+    with pytest.raises(TypeError) as err2:
+        standard_dev(["felix"])
+    assert("must contain only numerical") in str(err2.value)
+    # exception for items in list not numbers
