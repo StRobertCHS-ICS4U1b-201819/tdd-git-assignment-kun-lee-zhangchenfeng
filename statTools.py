@@ -2,6 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 Name: statTools.py
 Purpose:
+    Collection of functions calculating the central tendencies and spread of a set of numerical data
+    - mean, median, mode - range, upper quartile, lower quartile, variance, standard deviation
 
 Author: Lee.K, Zhang.C
 
@@ -86,7 +88,7 @@ def rng(data):
 
 def lower_quartile(input_list):
     """
-    Returns the median of the lower half of a list of integers not inclusive of the median of the whole list
+    Returns the median of the lower half of a list of Integers not inclusive of the median of the whole list
     list must be at least 4 integers long. ignores non-numerical entries
 
     :param input_list: list of Integers
