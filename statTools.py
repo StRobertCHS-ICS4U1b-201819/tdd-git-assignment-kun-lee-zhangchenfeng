@@ -89,7 +89,7 @@ def rng(data):
 def lower_quartile(input_list):
     """
     Returns the median of the lower half of a list of integers not inclusive of the median of the whole list
-    list must be at least 4 integers long
+    list must be at least 4 integers long. ignores non-numerical entries
 
     :param data: list of Integers
     :return: float rounded to 4 decimal the lower quartile of the data. None if no lower quartile
@@ -105,7 +105,7 @@ def lower_quartile(input_list):
 def upper_quartile(input_list):
     """
     Returns the median of the upper half of a list of integers not inclusive of the median of the whole list
-    list must be at least 4 integers long
+    list must be at least 4 integers long. ignores non-numerical entries
 
     :param data: list of Integers
     :return: float rounded to 4 decimal the upper quartile of the data. None if no upper quartile
@@ -120,7 +120,7 @@ def upper_quartile(input_list):
 
 def variance(input_list, sample=False):
     """
-    Returns the variance of a list of Integers
+    Returns the variance of a list of Integers ignoring non-numerical entries
     Method of calculation is dependent on whether the data is from a population
     Assumes not sample by default
 
@@ -137,7 +137,7 @@ def variance(input_list, sample=False):
 
 def standard_dev(input_list, sample=False):
     """
-    Returns the standard deviation of a list of Integers
+    Returns the standard deviation of a list of Integers ignoring non-numerical entries
     Method of calculation is dependent on whether the data is from a population
     Assumes not sample by default
 
