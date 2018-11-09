@@ -139,7 +139,8 @@ def standard_dev(data, sample=False):
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
+    if type(data) != list: raise TypeError("input must be a list")
     if len(data) == 0: return None
-    from math import sqrt
-    mew = sum(data) / len(data)
-    return round(sqrt(sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))), 4)
+    try: mew = sum(data) / len(data)
+    except TypeError: raise TypeError("list must contain only numerical values")
+    return round((sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))) ** 0.5, 4)
