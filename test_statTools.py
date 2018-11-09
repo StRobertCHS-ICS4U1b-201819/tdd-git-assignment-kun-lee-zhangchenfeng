@@ -71,6 +71,11 @@ def test_lower_quart():
     # less than 4 items in list
     assert(lower_quartile([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 3.5)
     # unsorted list
+    assert(lower_quartile([1, "felix", {"felix": 1}]) is None)
+    # list contains not numericals
+    with pytest.raises(TypeError) as err: lower_quartile("felix")
+    assert("input must be a list" in str(err.value))
+    # exception for input not list
 
 
 def test_upper_quart():
@@ -90,6 +95,11 @@ def test_upper_quart():
     # less than 4 items in list
     assert(upper_quartile([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 9.5)
     # unsorted list
+    assert(upper_quartile([1, "felix", {"felix": 1}]) is None)
+    # list contains not numericals
+    with pytest.raises(TypeError) as err: upper_quartile("felix")
+    assert("input must be a list" in str(err.value))
+    # exception for input not list
 
 
 def test_variance():
@@ -103,6 +113,12 @@ def test_variance():
     # variance of population
     assert(variance([], True) is None)
     # empty list
+    assert(variance([1, "felix", {"felix": 1}]) == 0)
+    # list contains not numericals
+    with pytest.raises(TypeError) as err: variance("felix")
+    assert("input must be a list" in str(err.value))
+    # exception for input not list
+
 
 
 def test_std():
@@ -114,5 +130,10 @@ def test_std():
     # std of population
     assert(standard_dev([-39, -4, -62, -27, -1, -29, -33, -105, -150, -147, 50, 59, 34, 42, -88, -7, -40, -23, 114, 102], True) == 72.2322)
     # std of sample
-    assert (standard_dev([]) is None)
+    assert(standard_dev([]) is None)
     # empty list
+    assert(standard_dev([1, "felix", {"felix": 1}]) == 0)
+    # list contains not numericals
+    with pytest.raises(TypeError) as err: standard_dev("felix")
+    assert("input must be a list" in str(err.value))
+    # exception for input not list

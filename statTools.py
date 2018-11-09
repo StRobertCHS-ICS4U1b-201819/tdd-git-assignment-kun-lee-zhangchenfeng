@@ -84,37 +84,41 @@ def rng(data):
     return big - small
 
 
-def lower_quartile(data):
+def lower_quartile(input_list):
     """
     Returns the median of the lower half of a list of integers not inclusive of the median of the whole list
-    list must be at least 4 integers long
+    list must be at least 4 integers long. ignores non-numerical entries
 
     :param data: list of Integers
     :return: float rounded to 4 decimal the lower quartile of the data. None if no lower quartile
     """
+    if type(input_list) != list: raise TypeError("input must be a list")
+    data = [value for value in input_list if type(value) == int or type(value) == float]
     length = len(data)
     if length < 4: return None
     list.sort(data)
     return round(data[length // 4] if length % 4 in [2, 3] else (data[length // 4] + data[length // 4 - 1]) / 2, 4)
 
 
-def upper_quartile(data):
+def upper_quartile(input_list):
     """
     Returns the median of the upper half of a list of integers not inclusive of the median of the whole list
-    list must be at least 4 integers long
+    list must be at least 4 integers long. ignores non-numerical entries
 
     :param data: list of Integers
     :return: float rounded to 4 decimal the upper quartile of the data. None if no upper quartile
     """
+    if type(input_list) != list: raise TypeError("input must be a list")
+    data = [value for value in input_list if type(value) == int or type(value) == float]
     length = len(data)
     if length < 4: return None
     list.sort(data)
     return round(data[-length // 4]if length % 4 in [2, 3] else(data[-(length // 4)] + data[-(length // 4) - 1]) / 2, 4)
 
 
-def variance(data, sample=False):
+def variance(input_list, sample=False):
     """
-    Returns the variance of a list of Integers
+    Returns the variance of a list of Integers ignoring non-numerical entries
     Method of calculation is dependent on whether the data is from a population
     Assumes not sample by default
 
@@ -122,14 +126,16 @@ def variance(data, sample=False):
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
-    if len(data) == 0: return None
+    if type(input_list) != list: raise TypeError("input must be a list")
+    if len(input_list) == 0: return None
+    data = [value for value in input_list if type(value) == int or type(value) == float]
     mew = sum(data) / len(data)
     return round(sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0)), 4)
 
 
-def standard_dev(data, sample=False):
+def standard_dev(input_list, sample=False):
     """
-    Returns the standard deviation of a list of Integers
+    Returns the standard deviation of a list of Integers ignoring non-numerical entries
     Method of calculation is dependent on whether the data is from a population
     Assumes not sample by default
 
@@ -137,7 +143,8 @@ def standard_dev(data, sample=False):
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
-    if len(data) == 0: return None
-    from math import sqrt
+    if type(input_list) != list: raise TypeError("input must be a list")
+    if len(input_list) == 0: return None
+    data = [value for value in input_list if type(value) == int or type(value) == float]
     mew = sum(data) / len(data)
-    return round(sqrt(sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))), 4)
+    return round((sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))) ** 0.5, 4)
