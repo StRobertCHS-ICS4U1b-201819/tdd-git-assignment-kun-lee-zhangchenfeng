@@ -89,30 +89,40 @@ def lower_quartile(input_list):
     Returns the median of the lower half of a list of integers not inclusive of the median of the whole list
     list must be at least 4 integers long. ignores non-numerical entries
 
-    :param data: list of Integers
+    :param input_list: list of Integers
     :return: float rounded to 4 decimal the lower quartile of the data. None if no lower quartile
     """
+    # raise error if input is not a list
     if type(input_list) != list: raise TypeError("input must be a list")
+    # filter out non integers or floats
     data = [value for value in input_list if type(value) == int or type(value) == float]
     length = len(data)
+    # return none if list is less than 4 numbers long
     if length < 4: return None
+    # sort the data ascending
     list.sort(data)
+    # return the lower quartile
     return round(data[length // 4] if length % 4 in [2, 3] else (data[length // 4] + data[length // 4 - 1]) / 2, 4)
 
 
 def upper_quartile(input_list):
     """
-    Returns the median of the upper half of a list of integers not inclusive of the median of the whole list
+    Returns the median of the upper half of a list of Integers not inclusive of the median of the whole list
     list must be at least 4 integers long. ignores non-numerical entries
 
-    :param data: list of Integers
+    :param input_list: list of Integers
     :return: float rounded to 4 decimal the upper quartile of the data. None if no upper quartile
     """
+    # raise error if input is not a list
     if type(input_list) != list: raise TypeError("input must be a list")
+    # filter out non integers or floats
     data = [value for value in input_list if type(value) == int or type(value) == float]
     length = len(data)
+    # return none if list is less than 4 numbers long
     if length < 4: return None
+    # sort the data ascending
     list.sort(data)
+    # return the upper quartile
     return round(data[-length // 4]if length % 4 in [2, 3] else(data[-(length // 4)] + data[-(length // 4) - 1]) / 2, 4)
 
 
@@ -122,13 +132,17 @@ def variance(input_list, sample=False):
     Method of calculation is dependent on whether the data is from a population
     Assumes not sample by default
 
-    :param data: list of Integers
+    :param input_list: list of Integers
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
+    # raise exception if input is not list
     if type(input_list) != list: raise TypeError("input must be a list")
+    # return none if list is empty
     if len(input_list) == 0: return None
+    # filter out non integers or floats
     data = [value for value in input_list if type(value) == int or type(value) == float]
+    # return variance: mew = μ = mean
     mew = sum(data) / len(data)
     return round(sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0)), 4)
 
@@ -139,12 +153,16 @@ def standard_dev(input_list, sample=False):
     Method of calculation is dependent on whether the data is from a population
     Assumes not sample by default
 
-    :param data: list of Integers
+    :param input_list: list of Integers
     :param sample: Boolean if the data is from a sample
     :return: Float rounded to 4 decimal places variance of the data. None if no data
     """
+    # raise error if input is not list
     if type(input_list) != list: raise TypeError("input must be a list")
+    # return none if list is empty
     if len(input_list) == 0: return None
+    # filter out non integers or floats
     data = [value for value in input_list if type(value) == int or type(value) == float]
+    # returns the standard deviation: mew = μ = mean
     mew = sum(data) / len(data)
     return round((sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))) ** 0.5, 4)
