@@ -114,7 +114,7 @@ def test_variance():
     assert(variance([], True) is None)
     # empty list
     assert(variance([1, "felix", {"felix": 1}]) == 0)
-    # list contains not numericals
+    # list contains not numerals
     with pytest.raises(TypeError) as err: variance("felix")
     assert("input must be a list" in str(err.value))
     # exception for input not list
@@ -133,7 +133,7 @@ def test_std():
     assert(standard_dev([]) is None)
     # empty list
     assert(standard_dev([1, "felix", {"felix": 1}]) == 0)
-    # list contains not numericals
+    # list contains not numerals
     with pytest.raises(TypeError) as err: standard_dev("felix")
     assert("input must be a list" in str(err.value))
     # exception for input not list
