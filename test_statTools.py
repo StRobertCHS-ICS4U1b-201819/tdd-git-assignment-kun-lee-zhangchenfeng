@@ -14,6 +14,11 @@ def test_mean_basic2():
     assert(mean([66, 74, 75, 78, 82, 89]) == 77.3333)
 
 
+def test_mean_notlist():
+    with pytest.raises(TypeError) as err: mean("felix")
+    assert("input must be a list" in str(err.value))
+
+
 def test_median_emptyList():
     assert(median([]) is None)
 
@@ -30,6 +35,11 @@ def test_median_evenList():
     assert (median([1, 2, 3, 4]) == 2.5)
 
 
+def test_median_notlist():
+    with pytest.raises(TypeError) as err: median("felix")
+    assert("input must be a list" in str(err.value))
+
+
 def test_mode_emptyList():
     assert(mode([]) is None)
 
@@ -42,6 +52,11 @@ def test_mode_multiple_modes():
     assert(mode([1, 1, 1, 3, 3, 3, 2, 5]) == [1, 3])
 
 
+def test_mode_notlist():
+    with pytest.raises(TypeError) as err: mode("felix")
+    assert("input must be a list" in str(err.value))
+
+
 def test_rng_emptyList():
     assert(rng([]) is None)
 
@@ -52,6 +67,11 @@ def test_rng_sortedList():
 
 def test_rng_unsortedList():
     assert(rng([13, 9, 8, 10, 10, 11, 11, 11, 12, 13]) == 5)
+
+
+def test_rng_notlist():
+    with pytest.raises(TypeError) as err: rng("felix")
+    assert("input must be a list" in str(err.value))
 
 
 def test_lower_quart():
@@ -72,7 +92,7 @@ def test_lower_quart():
     assert(lower_quartile([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 3.5)
     # unsorted list
     assert(lower_quartile([1, "felix", {"felix": 1}]) is None)
-    # list contains not numericals
+    # list contains not numerals
     with pytest.raises(TypeError) as err: lower_quartile("felix")
     assert("input must be a list" in str(err.value))
     # exception for input not list
@@ -96,7 +116,7 @@ def test_upper_quart():
     assert(upper_quartile([21, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1]) == 9.5)
     # unsorted list
     assert(upper_quartile([1, "felix", {"felix": 1}]) is None)
-    # list contains not numericals
+    # list contains not numerals
     with pytest.raises(TypeError) as err: upper_quartile("felix")
     assert("input must be a list" in str(err.value))
     # exception for input not list
@@ -118,7 +138,6 @@ def test_variance():
     with pytest.raises(TypeError) as err: variance("felix")
     assert("input must be a list" in str(err.value))
     # exception for input not list
-
 
 
 def test_std():
