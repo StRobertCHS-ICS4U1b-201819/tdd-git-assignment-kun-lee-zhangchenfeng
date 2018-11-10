@@ -2,7 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 Name: statTools.py
 Purpose:
-v
+    Collection of functions calculating the central tendencies and spread of a set of numerical data
+    - mean, median, mode - range, upper quartile, lower quartile, variance, standard deviation
 
 Author: Lee.K, Zhang.C
 
