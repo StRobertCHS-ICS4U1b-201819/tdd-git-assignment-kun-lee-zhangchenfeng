@@ -58,7 +58,7 @@ def mode(data):
     Returns the number that appears the most in the list.
 
     :param data: list of integers
-    :return: the integer(s) with the most frequency in the list. None if no data.
+    :return: list of integer(s) with the most frequency in the list. None if no data.
     """
     # raise error if input is not a list
     if type(data) != list: raise TypeError("input must be a list")
@@ -79,8 +79,6 @@ def mode(data):
     # finds all values that have the same number of occurrences as the greatest number of occurrences
     out = [unique for unique in count if count[unique] == highest]
     # returns single value if only 1 mode- list of values if multiple
-    if len(out) == 1:
-        return out[0]
     return sorted(out)
 
 
@@ -122,7 +120,7 @@ def lower_quartile(input_list):
     # return none if list is less than 4 numbers long
     if length < 4: return None
     # sort the data ascending
-    list.sort(data)
+    data.sort()
     # return the lower quartile
     # if length mod 4 is 2 or 3 there is odd # of items in each half- returns the middle of the half
     # if length mod 4 is 0 or 1 there is even # of items in each half- returns the mean of the middle 2 nums in the half
@@ -145,7 +143,7 @@ def upper_quartile(input_list):
     # return none if list is less than 4 numbers long
     if length < 4: return None
     # sort the data ascending
-    list.sort(data)
+    data.sort()
     # return the upper quartile
     # if length mod 4 is 2 or 3 there is odd # of items in each half- returns the middle of the half
     # if length mod 4 is 0 or 1 there is even # of items in each half- returns the mean of the middle 2 nums in the half

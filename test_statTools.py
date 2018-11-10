@@ -45,7 +45,7 @@ def test_mode_emptyList():
 
 
 def test_mode_basic1():
-   assert(mode([1, 1, 2, 3, 4]) == 1)
+   assert(mode([1, 1, 2, 3, 4]) == [1])
 
 
 def test_mode_multiple_modes():
