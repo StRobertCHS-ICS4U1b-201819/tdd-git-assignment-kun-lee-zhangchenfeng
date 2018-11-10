@@ -10,13 +10,6 @@
 - [x] variance
 - [x] std
 
-# _Nico Nico Nii_
-![nico](https://media.discordapp.net/attachments/509538412877971468/509540551494860832/nico_nico_nii.gif)
-
-This is | a table
-------- | -------
-wow | nice
-
 # TDD & Git Assignment
 
 ## 1) Objective
