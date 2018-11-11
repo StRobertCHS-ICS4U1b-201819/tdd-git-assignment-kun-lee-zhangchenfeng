@@ -158,7 +158,7 @@ def variance(input_list, sample=False):
 
     :param input_list: list of Integers
     :param sample: Boolean if the data is from a sample
-    :return: Float rounded to 4 decimal places variance of the data. None if no data
+    :return: float rounded to 4 decimal places variance of the data. None if no data
     """
     # raise exception if input is not list
     if type(input_list) != list: raise TypeError("input must be a list")
@@ -181,7 +181,7 @@ def standard_dev(input_list, sample=False):
 
     :param input_list: list of Integers
     :param sample: Boolean if the data is from a sample
-    :return: Float rounded to 4 decimal places variance of the data. None if no data
+    :return: float rounded to 4 decimal places variance of the data. None if no data
     """
     # raise error if input is not list
     if type(input_list) != list: raise TypeError("input must be a list")
