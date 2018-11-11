@@ -191,5 +191,5 @@ def standard_dev(input_list, sample=False):
     data = [value for value in input_list if type(value) == int or type(value) == float]
     # returns the standard deviation: mew = μ = mean
     mew = sum(data) / len(data)
-    # take all items subtract the mean then squared- summed up then square rooted- divided by length (-1 if sample)
+    # take all items subtract the mean then squared- summed up then divided by length (-1 if sample) then square rooted
     return round((sum([(item - mew) ** 2 for item in data]) / (len(data) + (-1 if sample else 0))) ** 0.5, 4)
