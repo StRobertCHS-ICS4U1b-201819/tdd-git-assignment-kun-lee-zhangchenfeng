@@ -42,15 +42,13 @@ def median(data):
     # raise error if input is not a list
     if type(data) != list: raise TypeError("input must be a list")
     # return none is empty list
-    if len(data) == 0:
+    l = len(data)
+    if l == 0:
         return None
     # sort data ascending
     sorted_data = sorted(data)
     # returns middle number is odd number of data points- otherwise the mean of the middle 2 data points
-    if len(data) % 2 != 0:
-        return sorted_data[len(data) // 2]
-    else:
-        return (sorted_data[len(data) // 2] + (sorted_data[(len(data) // 2) - 1])) / 2
+    return (l % 2) * sorted_data[l // 2] or (sorted_data[l // 2] + sorted_data[l // 2 - 1]) / 2
 
 
 def mode(data):
